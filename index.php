@@ -3,7 +3,7 @@
 
 <head>
     <title>Password Generator</title>
-    <?php require('form_processing.php') ?>
+    <?php require('form_processing.php') ; ?>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 </head>
 
@@ -12,12 +12,21 @@
     
 
     <form class="pure-form pure-form-stacked" action="index.php" method="POST" >
-        Your password is: "<?php echo $generated_pw ?>"
+        <?php
+            if(isset($generated_pw) && $generated_pw) {
+                echo "<p style=\"color: red;\">*",htmlspecialchars($generated_pw),"</p>\n\n";
+            }
+        ?>
         
         <fieldset>
             <div class="pure-control-group">
                 <label for="words">Number of Words (Max 5)</label>
                 <input id = "words" name="numWords" type="text" placeholder="Number of words (max 5)" maxlength = "1">
+                <?php
+                    if(isset($display_error_msg) && $display_error_msg) {
+                    echo "<p style=\"color: red;\">*",htmlspecialchars($display_error_msg),"</p>\n\n";
+                    }
+                ?>
             </div>
 
             <div class="pure-controls">
