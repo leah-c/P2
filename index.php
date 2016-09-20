@@ -12,6 +12,8 @@
     
 
     <form class="pure-form pure-form-stacked" action="index.php" method="POST" >
+        Your password is: "<?php echo $generated_pw ?>"
+        
         <fieldset>
             <div class="pure-control-group">
                 <label for="words">Number of Words (Max 5)</label>
