@@ -29,7 +29,7 @@
                     <input id="cb2" type="checkbox" name ="add_numbers" value ="addNum"> Add numbers
                 </label>
 
-                <button type="submit" class="pure-button pure-button-primary">Generate Password</button>
+                <button type="submit" class="pure-button pure-button-primary" name ="generate_pw">Generate Password</button>
             </div>
         </fieldset>
     </form>
