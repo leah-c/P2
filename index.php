@@ -20,7 +20,7 @@
 
             <div class="pure-controls">
                 <label for="cb1" class="pure-checkbox">
-                    <input id="cb1" type="checkbox" name ="add_special_char" value = "spcl"> Add special characters
+                    <input id="cb1" type="checkbox" name ="add_special_char" value = "addSpcl"> Add special characters
                 </label>
 
                 <label for="cb2" class="pure-checkbox">
