@@ -3,4 +3,5 @@
 ### Live URL : [ to be posted ]
 ### Screencast Demo: [ to be posted ]
 
-###Yahoo CDN for Pure framework was used.
+####Yahoo CDN for Pure framework was used.
+####Ipsum Generator Used: http://www.lipsum.com/
