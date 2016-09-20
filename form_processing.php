@@ -10,7 +10,35 @@ $generated_pw = "";
 $num_elements_special_chars_lib = count($special_chars_lib)-1;
 $num_elements_word_lib = count($word_lib)-1;
 
+$empty_value_error = "Please enter the number of words you would like in the password!";
+$non_numeric_error = "Please enter a numeric value.";
+$out_of_range_error = "Please enter a number between 1 and 5.";
+$display_error_msg = "";
 
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    //================================================
+    //  input validation
+    //  check to see if input is empty, non-numeric
+    //  or out of range
+    //================================================
+    if (empty($_POST['numWords'])){
+        $display_error_msg =  $empty_value_error;
+        echo $display_error_msg;
+    }
+    
+    elseif (! is_numeric($_POST['numWords'])){
+        $display_error_msg =  $non_numeric_error;
+        echo $display_error_msg;
+    }
+    
+    elseif(intval($_POST['numWords'] > 5 || intval($_POST['numWords'] < 1 ))){
+        $display_error_msg =  $out_of_range_error;   
+        echo $display_error_msg;
+    }
+  }
+
+/*
 if (isset($_POST['numWords'])) {
     $inputNumWords = $_POST['numWords'];
     $inputNumWords *= 1;
@@ -25,14 +53,14 @@ if (isset($_POST['numWords'])) {
     elseif($inputNumWords > 5){
        //generate error msg
     }
-    */
+    
 };
-
+*/
 /*if (isset( $_POST['add_special_char'])) {
     $inputAddSpecialChars =  $_POST['add_special_char'];
 };
 */
-if (isset( $_POST['add_numbers'])) {
+/*if (isset( $_POST['add_numbers'])) {
     $inputAddNumbers =  $_POST['add_numbers'];
 };
 
@@ -57,10 +85,6 @@ for ($i = 1; $i <= $inputNumWords; $i++) {
         $generated_pw = $generated_pw . $rand_num;
     }
 }
+*/
 
-var_dump($inputNumWords);
-var_dump($inputAddSpecialChars);
-var_dump($inputAddNumbers);
-var_dump($num_elements_word_lib);
-var_dump($num_elements_special_chars_lib);
 ?>
