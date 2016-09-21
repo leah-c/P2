@@ -5,11 +5,12 @@
     <title>Password Generator</title>
     <?php require('form_processing.php') ; ?>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" type= "text/css" href="style.css">
 </head>
 
 <body>
+    <div class="container">
     <h2>Password Generator</h2>
-    
 
     <form class="pure-form pure-form-stacked" action="index.php" method="POST" >
         <?php
@@ -42,6 +43,7 @@
             </div>
         </fieldset>
     </form>
+    </div>
 </body>
 
 </html>
