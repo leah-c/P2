@@ -18,6 +18,9 @@ $non_numeric_error = "Please enter a numeric value.";
 $out_of_range_error = "Please enter a number between 1 and 5.";
 $display_error_msg = "";
 
+//  initializing flags
+$addSpecialChars = false;
+$addNumbers = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     
@@ -48,11 +51,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     // characters or numbers to the password
     //================================================    
     if (isset( $_POST['add_special_char'])) {
-        $inputAddSpecialChars =  $_POST['add_special_char'];
+        $addSpecialChars = true;
+
     };
 
     if (isset( $_POST['add_numbers'])) {
-        $inputAddNumbers =  $_POST['add_numbers'];
+        $addNumbers = true;
   
     };
     
@@ -71,14 +75,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         //  if user elected to add special characters then generate a random
         //  number to determine which character to pick from our special char lib
         //  and concatenate    
-        if ($_POST['add_special_char'] == "addSpcl") {
+        //if ($_POST['add_special_char'] == "addSpcl") {
+        if ($addSpecialChars) {
             $spcl_char_index = rand(0,$num_elements_special_chars_lib);
             $generated_pw = $generated_pw . $special_chars_lib[$spcl_char_index];
         }
 
         //  if user elected to add numeric values then generate a random
         //  number and concatenate
-        if ($_POST['add_numbers'] == "addNum") {
+        if ($addNumbers) {
             $rand_num = rand(0,201);
             $generated_pw = $generated_pw . $rand_num;
         }
