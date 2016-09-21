@@ -14,7 +14,7 @@
     <form class="pure-form pure-form-stacked" action="index.php" method="POST" >
         <?php
             if(isset($generated_pw) && $generated_pw) {
-                echo "<p style=\"color: red;\">*",htmlspecialchars($generated_pw),"</p>\n\n";
+                echo "<p style=\"font-weight: bolder;\">Your Password is: ",htmlspecialchars($generated_pw),"</p>\n\n";
             }
         ?>
         
@@ -24,7 +24,7 @@
                 <input id = "words" name="numWords" type="text" placeholder="Number of words (max 5)" maxlength = "1">
                 <?php
                     if(isset($display_error_msg) && $display_error_msg) {
-                    echo "<p style=\"color: red;\">*",htmlspecialchars($display_error_msg),"</p>\n\n";
+                        echo "<p style=\"color: red;\">* ",htmlspecialchars($display_error_msg),"</p>\n\n";
                     }
                 ?>
             </div>
