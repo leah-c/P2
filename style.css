@@ -1,0 +1,11 @@
+.container {
+    width:30%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 3% 5%;
+}
+
+#words{
+    margin: 1px 1px;
+    padding:  5px;  
+}
