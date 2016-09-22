@@ -29,7 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     //  check to see if input is empty, non-numeric
     //  or out of range
     //================================================
-    if (empty($_POST['numWords'])){
+             
+   if (empty($_POST['numWords'])){
         $display_error_msg =  $empty_value_error;
     }
     
@@ -70,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     //================================================
     for ($i = 1; $i <= $inputNumWords; $i++) {
         $index = rand(0, $num_elements_word_lib);
-        $generated_pw = $generated_pw . $word_lib[$index] .  " - ";
+        $generated_pw = $generated_pw . $word_lib[$index] .  " ";
 
         //  if user elected to add special characters then generate a random
         //  number to determine which character to pick from our special char lib

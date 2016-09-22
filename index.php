@@ -21,6 +21,7 @@
         
         <fieldset>
             <div class="pure-control-group">
+                <p id="instructions">Please enter the number of words you'd like in your password in the field below. If you would like to add special characters or numbers to the password, select the appropriate checkbox.</p>
                 <label for="words">Number of Words (Max 5)</label>
                 <input id = "words" name="numWords" type="text" placeholder="Number of words (max 5)" maxlength = "1">
                 <?php
