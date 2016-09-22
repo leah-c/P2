@@ -1,11 +1,25 @@
 .container {
-    width:30%;
+    width: 30%;
     height: 50%;
     margin: 0 auto;
     padding: 3% 5%;
 }
 
-#words{
+#words {
     margin: 1px 1px;
-    padding:  5px;  
+    padding: 5px;
+}
+
+#instructions {
+    font-size: 13px;
+}
+
+#pw_generated {
+    font-weight: bolder;
+}
+
+#error_display {
+    color: red;
+    font-size: 13px;
+    font-weight: bolder;
 }
