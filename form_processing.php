@@ -29,13 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     //  check to see if input is empty, non-numeric
     //  or out of range
     //================================================
-    var_dump($_POST['numWords']);
-    var_dump(empty($_POST['numWords']));    
-    var_dump(is_null($_POST['numWords']));    
-    var_dump(intval($_POST['numWords'])); 
-    var_dump(isset($_POST['numWords']) && $_POST['numWords'] != '');
-    
-   // added intval() check for 0 since that is being read as an empty string
     if ((isset($_POST['numWords'])) && ($_POST['numWords'] == "")){
 
         $display_error_msg =  $empty_value_error;
